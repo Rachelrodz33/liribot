@@ -1,0 +1,26 @@
+{
+  "name": "liribot",
+  "version": "1.0.0",
+  "description": "Liribot",
+  "main": "liribot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rachelrodz33/liribot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rachelrodz33/liribot/issues"
+  },
+  "homepage": "https://github.com/Rachelrodz33/liribot#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bandsintown": "^1.0.1",
+    "node-spotify-api": "^1.0.7",
+    "omdb": "^0.8.0"
+  }
+}

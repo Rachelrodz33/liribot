@@ -14,9 +14,6 @@ const command = process.argv[2];
 const secondCommand = process.argv[3];
 
 switch (command) {
-    case ('my-tweets'):
-        getTweets();
-    break;
     case ('spotify-this-song'):
         if(secondCommand){
             spotifyThisSong(secondCommand);
@@ -32,24 +29,14 @@ switch (command) {
         }
     break;
     case ('do-what-it-says'):
-         doThing();
+         doWhatItSays();
     break;
     default:
         console.log('Try again');
 };
 
 
-function getTweets() {
-    client.get('statuses/home_timeline', function(error, tweets, response) {
-        if(error) throw error;
-       console.log("________________________________________");
-                    
-                    const tweets_parsed = tweets.map(word =>word.text);
-                    tweets_parsed.forEach(function(element) {
-                    console.log(element);
-                    });
-                });
-            }
+
 //spotify-this-song
 
 function spotifyThisSong(song){
@@ -104,6 +91,16 @@ function spotifyThisSong(song){
         });
         
     }
+
+//concert-this
+var bandsintown = require('bandsintown')(APP_ID);
+ 
+bandsintown
+  .getArtistEventList('Skrillex')
+  .then(function(events) {
+    // return array of events
+  });
+  
 //do-what-it-says
 
       function doWhatItSays(){
@@ -114,7 +111,6 @@ function spotifyThisSong(song){
         });
       }
 //make liri 
-//concert-this
 
 
 
